@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>DIABTETES PREDICTION</title>
+    <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interactive Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f5f5f5;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+    
+    .container {
+      background-color: #f3ecec;
+      border-radius: 20px;
+      padding: 20px;
+      box-shadow: 0px 0px 10px rgba(32, 11, 84, 0.2);
+      width: 80%;
+      max-width: 550px;
+      text-align: center;
+    }
+    
+    h1 {
+      margin-top: 0;
+      margin-bottom: 20px;
+    }
+    
+    label {
+      display: block;
+      margin-bottom: 5px;
+      margin-right: 5px;
+      font-weight: bold;
+    }
+    
+    input[type="text"] {
+      width: 87%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      margin-bottom: 15px;
+    }
+    
+    input[type="submit"] {
+      width: 30%;
+      background-color: #007bff;
+      color: #ffffff;
+      border: none;
+      border-radius: 12px;
+      padding: 10px 20px;
+      cursor: pointer;
+    }
+    
+    input[type="submit"]:hover {
+      background-color: #0056b3;
+    }
+    
+    .result-box {
+      background-color: #aeabab;
+      border-radius: 15px;
+      padding: 15px;
+      margin-top: 10px;
+      width: 50%;
+      margin-left:130px;
+      background-size: 50px;
+      
+    }
+  </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Know if you are diabetic or not</h1>
+        <form id="interactive-form" method="POST">
+          <input type="text" id="entry1" name="entry1" placeholder="Pregnancies">
+          <input type="text" id="entry2" name="entry2" placeholder="Glucose">
+          <input type="text" id="entry3" name="entry3" placeholder="BloodPressure">
+          <input type="text" id="entry4" name="entry4" placeholder="SkinThickness">
+          <input type="text" id="entry5" name="entry5" placeholder="Insulin">
+          <input type="text" id="entry6" name="entry6" placeholder="BMI">
+          <input type="text" id="entry7" name="entry7" placeholder="DiabetesPedigreeFunction">
+          <input type="text" id="entry8" name="entry8" placeholder="Age">
+          
+          <!-- <label for="entry2">Glucose</label>
+          <input type="text" id="entry2" name="entry2">
+          
+          <label for="entry3">BloodPressure</label>
+          <input type="text" id="entry3" name="entry3">
+          
+          <label for="entry4">SkinThickness</label>
+          <input type="text" id="entry4" name="entry4">
+          
+          <label for="entry5">Insulin</label>
+          <input type="text" id="entry5" name="entry5">
+          
+          <label for="entry6">BMI</label>
+          <input type="text" id="entry6" name="entry6">
+          
+          <label for="entry7">DP function</label>
+          <input type="text" id="entry7" name="entry7">
+          
+          <label for="entry8">Age</label>
+          <input type="text" id="entry8" name="entry8"> -->
+          
+          <input type="submit" value="Submit">
+        </form>
+        <div class="result-box" id="result-box" ;">
+            {% if pred is not none %}
+            {{ "You are diabetic" if pred == [1] else "you are not diabetic" }}
+            {% endif %}
+        </div>
+      </div>
+</body>
+</html>
