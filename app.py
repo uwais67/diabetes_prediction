@@ -16,6 +16,7 @@ def home():
         a7 = request.form.get('entry7')
         a8 = request.form.get('entry8')
         pred=clf.predict([[a1,a2,a3,a4,a5,a6,a7,a8]])
+        pred=pred[0]
       return render_template('index.html', pred=pred)
 
 if __name__=="__main__":

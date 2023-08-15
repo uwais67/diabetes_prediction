@@ -111,7 +111,7 @@
         </form>
         <div class="result-box" id="result-box" ;">
             {% if pred is not none %}
-            {{ "You are diabetic" if pred == [1] else "you are not diabetic" }}
+            {{ "You are diabetic" if pred == 1 else "you are not diabetic" }}
             {% endif %}
         </div>
       </div>
