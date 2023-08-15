@@ -1,4 +1,4 @@
-certifi @ file:///croot/certifi_1671487769961/work/certifi
+certifi==2023.7.22
 pip==23.2.1
 click==8.1.6
 Flask==2.2.5
